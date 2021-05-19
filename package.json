@@ -1,0 +1,11 @@
+{
+  "name": "js-metaprogramming",
+  "version": "1.0.0",
+  "description": "Notes and examples for a talk covering the ES6 metaprogramming types and techniques",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Fancher",
+  "license": "MIT"
+}
