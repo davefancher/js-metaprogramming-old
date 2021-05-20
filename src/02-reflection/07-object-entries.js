@@ -1,6 +1,5 @@
 // Essentially a combination of Object.keys and Object.values, Object.entries
 // gets an array of the own key/value pairs from an object
-
 const myObject = {
     firstName: "Dave",
     lastName: "Fancher"

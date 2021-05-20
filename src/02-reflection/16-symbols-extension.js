@@ -1,6 +1,7 @@
-// We can take advantage of symbols to provide our own extensibility points in our code. I've
-// successfully used this technique to provide a rough equivalent of C#'s extension methods
-// in JavaScript thus enabling incredibly useful features such as functional pipelining.
+// We can take advantage of symbols to provide our own extensibility points in our
+// code. I've successfully used this technique to provide a rough equivalent of
+// C#'s extension methods in JavaScript thus enabling incredibly useful features
+// such as functional pipelining.
 
 // Consider the following:
 

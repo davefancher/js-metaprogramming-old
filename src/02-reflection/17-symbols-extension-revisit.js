@@ -1,9 +1,9 @@
-// As mentioned earlier we need access to `this` for these extension methods to work. The
-// problem is that working with `this` tends to be problematic because what `this` is can be
-// a bit confusing depending on context. For that reason I tend to favor arrow functions over
-// classic functions since it removes their dependency on that context. With a few small tweaks
-// to the previous code we can allow extending our objects with arrow functions rather than
-// classic functions.
+// As mentioned earlier we need access to `this` for these extension methods to work.
+// The problem is that working with `this` tends to be problematic because what
+// `this` is can be a bit confusing depending on context. For that reason I tend to
+// favor arrow functions over classic functions since it removes their dependency on
+// that context. With a few small tweaks to the previous code we can allow extending
+// our objects with arrow functions rather than classic functions.
 
 // Consider the following:
 
@@ -42,8 +42,11 @@ const attachSymbolToStringPrototype =
 
 // Now we attach the extension functions like this:
 
-const PIPE = attachSymbolToObjectPrototype(target => fn => fn(target));
-const TO_UPPER_CASE = attachSymbolToStringPrototype(target => () => target.toUpperCase());
+const PIPE =
+    attachSymbolToObjectPrototype(target => fn => fn(target));
+
+const TO_UPPER_CASE =
+    attachSymbolToStringPrototype(target => () => target.toUpperCase());
 
 // Note how we've switched to arrow functions as discussed earlier. When we invoke one of
 // the _attachSymbolXXX_ functions the base `attachSymbol` function invokes the supplied

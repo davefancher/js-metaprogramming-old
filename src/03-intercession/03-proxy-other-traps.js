@@ -60,7 +60,8 @@ myObject.lastName = "Fancher";
 myObject.history; //?
 
 // The lack of property references comes with an added benefit. With Proxy we can set
-// arbitrary properties on the underlying object and still have the benefits of the Proxy traps.
+// arbitrary properties on the underlying object and still have the benefits of the Proxy
+// traps.
 
 myObject.age; //?
 
@@ -70,7 +71,9 @@ myObject.age; //?
 
 myObject.history;
 
-// The deleteProperty trap is invoked for both Reflect.deleteProperty and the delete operator
+// The deleteProperty trap is invoked for both Reflect.deleteProperty and the delete
+// operator
+
 Reflect.deleteProperty(myObject, "age");
 //delete myObject.age;
 

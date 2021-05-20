@@ -36,12 +36,13 @@ myObject.history; //?
 myObject.firstName = "Dave";
 myObject.lastName = "Fancher";
 
-`${myObject.firstName} ${myObject.lastName}`;
+`${myObject.firstName} ${myObject.lastName}`; //?
 
 myObject.history; //?
 
 // The lack of property references comes with an added benefit. With Proxy we can set
-// arbitrary properties on the underlying object and still have the benefits of the Proxy traps.
+// arbitrary properties on the underlying object and still have the benefits of the Proxy
+// traps.
 
 myObject.age; //?
 
@@ -49,4 +50,4 @@ myObject.age = 41;
 
 myObject.age; //?
 
-myObject.history;
+myObject.history; //?

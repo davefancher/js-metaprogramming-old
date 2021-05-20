@@ -1,4 +1,5 @@
-// The in operator tells us whether a property exists within an object or its prototype chain
+// The in operator tells us whether a property exists within an object
+// or its prototype chain
 
 const myObject = {
     firstName: "Dave",
@@ -12,7 +13,8 @@ const myObject = {
 
 
 
-// We can also use the in operator with a for loop to enumerate all of an object's properties
+// We can also use the in operator with a for loop to enumerate all of
+// an object's properties
 
 const allAttrs = [];
 

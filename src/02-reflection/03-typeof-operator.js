@@ -1,4 +1,8 @@
-// typeof provides rudimentary support for determining a variable's type. As the MDN docs say "typeof is very useful, but it's not as versatile as might be required.". This is due to typeof often returning different things depending on how a value was created or how JavaScript represents other types internally.
+// typeof provides rudimentary support for determining a variable's type. As
+// the MDN docs say "typeof is very useful, but it's not as versatile as
+// might be required.". This is due to typeof often returning different things
+// depending on how a value was created or how JavaScript represents other
+// types internally.
 
 // Numbers
 typeof 37; //?

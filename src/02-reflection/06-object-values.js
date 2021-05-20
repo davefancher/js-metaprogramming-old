@@ -1,5 +1,5 @@
-// Object.values returns an array of all of the property values within an object
-// in the order in which they're defined
+// Object.values returns an array of all of the property values within an
+// object in the order in which they're defined
 
 const myObject = {
     firstName: "Dave",

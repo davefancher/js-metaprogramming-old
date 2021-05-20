@@ -1,15 +1,16 @@
-// Reflect.defineProperty and Reflect.deleteProperty offer a consistent, unified interface
-// for manipulating objects.
+// Reflect.defineProperty and Reflect.deleteProperty offer a consistent, unified
+// interface for manipulating objects.
 
 const myObject = {
     firstName: "Dave",
     lastName: "Fancher"
 };
 
-// Reflect.defineProperty has the same signature as Object.defineProperty so the following
-// should look rather familiar
 
-Object.defineProperty(
+// Reflect.defineProperty has the same signature as Object.defineProperty so the
+// following should look rather familiar
+
+Reflect.defineProperty(
     myObject,
     "age",
     {

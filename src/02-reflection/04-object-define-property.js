@@ -1,6 +1,6 @@
-// Adds a new property to an object but unlike setting the property with the dot
-// or bracket notations this approach gives us more control over various aspects
-// of the new property's behavior
+// Adds a new property to an object but unlike setting the property with the
+// dot or bracket notations this approach gives us more control over various
+// aspects of the new property's behavior
 
 const myObject = {
     firstName: "Dave",

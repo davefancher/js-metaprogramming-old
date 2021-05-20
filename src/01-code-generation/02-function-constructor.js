@@ -3,6 +3,6 @@
 const sayHello =
     new Function(
         "name",
-        "return `[func] Hello, ${name}!`");
+        "return `[func] Hello, ${name}!`"); //?
 
 sayHello("Dave"); //?
