@@ -12,7 +12,7 @@ What we're interested in for the purposes of this discussion are the techniques 
 
 Metaprogramming ultimately falls into three categories:
 
-* Generation/Manipulation
+* Generation
 * Reflection/Introspection
 * Intercession
 
@@ -20,7 +20,7 @@ JavaScript has always supported some degree of metaprogramming, particularly in 
 
 As we explore metaprogramming in JavaScript we'll look at both the old approaches and the new.
 
-## Generation/Manipulation
+## Generation
 
 Code generation is exactly what it sounds like: code writing code. In its simplest form this is passing a string that contains some executable code to the `eval` function (which you should almost never do, by the way).
 
@@ -38,18 +38,39 @@ Although code generation in JavaScript might not be terribly useful but the same
 
 Reflection, or introspection, allows us to inspect and even modify our programs as they're running! This can include everything from inspecting object structure to determining object types to dynamically modifying data structures.
 
-### Object Functions
-
-* [`Object`][2] functions
-
 ### Operators
 
-* [`delete`][4] operator
-* [instanceof][8] operator
+Even in JavaScript's earliest days we had some limited support for _reflective_ programming. This was (and in some cases still is) typically accomplished through some operators. Here are some highlights:
+
+* [`in`][9] operator - returns true or false based on whether a property is present in the object or its prototype chain [[Example][11]]
+* [`delete`][4] operator - allows removing a property from an object [[Example][12]]
+* [`typeof][10] operator - returns a value's underlying type name but is unreliable. Use other approaches instead. [[Example][13]]
+
+Although the various operators we've discussed certainly have their place they can be cumbersome to work with and definitely follow some obsolete patterns. Fortunately as JavaScript has evolved so has its metaprogramming capabilities.
+
+### `Object` Functions
+
+One key area where reflective programming capabilities have expanded is with the [`Object` type][2] itself. Rather than relying on codifying the metaprogramming capabilities into the language itself with keywords and operators the `Object` type now exposes a variety of reflective and introspective functions. Although not as robust as in other languages this suite of functions enables an impressive range of possibilities in a much more expressive manner. Let's tour some of the more useful and interesting functions.
+
+* Object.defineProperty - provides a more robust interface for adding new properties to an object [[Example][]]
+* Object.getOwnPropertyNames/Object.keys - similar yet subtly different functions for listing an object's properties [[Example][]]
+* Object.values - gets an array of all values contained in an object [[Example][]]
+* Object.entries - gets an array of property key/value pairs from an object [[Example][]]
+* Object.fromEntries - initializes an object based on an array of key/value pairs [[Example][]]
+* Object.assign - copies properties from one or more source objects into a target object [[Example][]]
 
 ### `Reflect` Type
 
-Introduced with ES6, the `Reflect` type offers a modernized interface for interrogating and manipulating object structure.
+Introduced with ES6, the `Reflect` type defines some alternative reflection and introspection functions to those provided by the `Object` type. What sets the Reflect type's capabilities apart from `Object`'s is that unlike the `Object` functions, the `Reflect` functions are intended to work with some internal things that would otherwise be "hidden" from our code.
+
+Despite the many similarities the `Reflect` functions stand apart from the `Object` functions in that they generally provide more consistent and expected behavior mainly in regard to throwing errors when acting upon types that shouldn't be acted upon in that manner.
+
+Again, some highlights:
+
+* Reflect.defineProperty/Reflect.deleteProperty
+* Reflect.get/Reflect.set
+* Reflect.ownKeys
+* Reflect.has
 
 ### `Symbol` Type
 
@@ -75,4 +96,8 @@ New to JavaScript with ES6.
 [5]: ./src/01-code-generation/01-eval.js
 [6]: ./src/01-code-generation/02-function-constructor.js
 [7]: ./src/01-code-generation/03-vm-module.js
-[8]: https://developer.mozilla.org/en-US/docs/web/javascript/reference/operators/instanceof
+[9]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in
+[10]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+[11]: ./src/02-reflection/01-in-operator.js
+[12]: ./src/02-reflection/02-delete-operator.js
+[13]: ./src/02-reflection/03-typeof-operator.js
