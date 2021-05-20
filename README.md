@@ -78,13 +78,16 @@ Also introduced with ES6, Symbols aren't inherently part of JavaScript metaprogr
 
 Symbols factor into metaprogramming by providing a mechanism by which we can safely extend objects, including the built-in types, without fear of conflicting with existing definitions. They can do this because every Symbol is guaranteed to be a unique instance when created with the Symbol constructor. This not only gives us a convenient way to add custom functionality but indeed also serves as the basis for numerous modern language mechanisms in a manner similar to that of how .NET interfaces drive C# language features such as `using` and `foreach`.
 
-[Examples][39]
+* [Introductory Examples][39]
+* [Well-known Symbol Example][40]
+* [Extension Symbols Example][41]
+* [Extension Symbols Revisited Example][42]
 
 ## Intercession
 
-New to JavaScript with ES6.
+In metaprogramming intercession is about intercepting behavior. Prior to ES6 JavaScript provided only a few very limited intercession mechanisms. We already got a glance of these features in our Symbol discussion but let's take a closer look.
 
-* `Object.defineProperty`
+* [`Object.defineProperty` Examples][43]
 * `Proxy` type
 
 <!-- References -->
@@ -126,4 +129,8 @@ New to JavaScript with ES6.
 [36]: ./src/02-reflection/11-reflect-get-set.js
 [37]: ./src/02-reflection/12-reflect-ownkeys.js
 [38]: ./src/02-reflection/13-reflect-has.js
-[39]: ./src/02-reflection/14-symbols.js
+[39]: ./src/02-reflection/14-symbols-intro.js
+[40]: ./src/02-reflection/15-symbols-well-known.js
+[41]: ./src/02-reflection/16-symbols-extension.js
+[42]: ./src/02-reflection/17-symbols-extension-revisit.js
+[43]: ./src/03-intercession/01-object-define-property.js
