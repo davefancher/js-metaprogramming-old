@@ -88,3 +88,16 @@ myOtherObject.history; //?
 
 // In either case, JavaScript handles the custom logic on property read/write
 // and the "client" code is none the wiser.
+
+// A major drawback of this approach is that we need to explicitly define any
+// property that we wish to intercept. I can still set an arbitrary property on
+// the object but if we haven't defined the property the custom logic won't be
+// invoked as we can see in this next example.
+
+myObject.age = 41;
+
+myObject.age; //?
+
+myObject.history; //?
+
+// Fortunately ES6 introduces a much more flexible mechanism. Let's look at that next.

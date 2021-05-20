@@ -88,7 +88,16 @@ Symbols factor into metaprogramming by providing a mechanism by which we can saf
 In metaprogramming intercession is about intercepting behavior. Prior to ES6 JavaScript provided only a few very limited intercession mechanisms. We already got a glance of these features in our Symbol discussion but let's take a closer look.
 
 * [`Object.defineProperty` Examples][43]
-* `Proxy` type
+
+ES6 introduced a new type entirely focused on intercession. The Proxy type allows intercepting a wider range of activities in affecting an arbitrarily wrapped object through a series of special handlers called "traps". These traps correspond exactly with the functions provided by the Reflect type so there's a convenient symmetry between the two objects that eliminates the guesswork that often comes from inconsistent interfaces.
+
+Let's take a look at the previous example instead implemented as a proxy.
+
+* [Simple `Proxy` Examples][44]
+* [Additional `Proxy` Hooks Examples][45]
+
+I'll readily admit that I've had little use for Proxy in my day-to-day work so it is a weak point in my understanding of JS metaprogramming but I can definitely see cases where it would be useful, particularly when interacting with 3rd party objects or
+providing more dynamic data structures.
 
 <!-- References -->
 
@@ -134,3 +143,5 @@ In metaprogramming intercession is about intercepting behavior. Prior to ES6 Jav
 [41]: ./src/02-reflection/16-symbols-extension.js
 [42]: ./src/02-reflection/17-symbols-extension-revisit.js
 [43]: ./src/03-intercession/01-object-define-property.js
+[44]: ./src/03-intercession/02-proxy-simple.js
+[45]: ./src/03-intercession/03-proxy-other-traps.js
