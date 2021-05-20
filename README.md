@@ -99,6 +99,10 @@ Let's take a look at the previous example instead implemented as a proxy.
 I'll readily admit that I've had little use for Proxy in my day-to-day work so it is a weak point in my understanding of JS metaprogramming but I can definitely see cases where it would be useful, particularly when interacting with 3rd party objects or
 providing more dynamic data structures.
 
+## Wrapping Up
+
+Metaprogramming in JavaScript has evolved greatly over the years starting with its humble beginnings with a series of operators to the more robust capabilities provided by the Object, Reflect, Symbol, and Proxy types we have today. It may not yet be as powerful as in other languages but I've nevertheless found it to be an invaluable tool for building a maintainable platform relies heavily on coding conventions over configuration or allowing for changing the language semantics such that the code I write is more expressive than would normally be possible.
+
 <!-- References -->
 
 [1]: https://en.wikipedia.org/wiki/Metaprogramming
