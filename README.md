@@ -24,9 +24,9 @@ As we explore metaprogramming in JavaScript we'll look at both the old approache
 
 Code generation is exactly what it sounds like: code writing code. In its simplest form this is passing a string that contains some executable code to the `eval` function (which you should almost never do, by the way).
 
-* [eval][3] - [[Example][5]]
-* `Function` constructor [[Example][6]]
-* `VM` module (node.js) [[Example][7]]
+* [eval][3] - evaluates a string as JavaScript in an unsafe and inefficient manner [[Example][5]]
+* [`Function` constructor][15] - defines a new function from a string with additional security considerations [[Example][6]]
+* [`VM` module][16] (node.js) - evaluates a string as JavaScript in a configurable context [[Example][7]]
 
 As useful as these techniques may appear on the surface unless you're specifically trying to run code stored externally (such as custom, user-defined validation rules) there's usually very little reason to use them since there are typically better, safer approaches. And to be perfectly honest, I really struggled to come up with demonstrative examples here because I'd never do the things as demonstrated.
 
@@ -52,12 +52,12 @@ Although the various operators we've discussed certainly have their place they c
 
 One key area where reflective programming capabilities have expanded is with the [`Object` type][2] itself. Rather than relying on codifying the metaprogramming capabilities into the language itself with keywords and operators the `Object` type now exposes a variety of reflective and introspective functions. Although not as robust as in other languages this suite of functions enables an impressive range of possibilities in a much more expressive manner. Let's tour some of the more useful and interesting functions.
 
-* Object.defineProperty - provides a more robust interface for adding new properties to an object [[Example][]]
-* Object.getOwnPropertyNames/Object.keys - similar yet subtly different functions for listing an object's properties [[Example][]]
-* Object.values - gets an array of all values contained in an object [[Example][]]
-* Object.entries - gets an array of property key/value pairs from an object [[Example][]]
-* Object.fromEntries - initializes an object based on an array of key/value pairs [[Example][]]
-* Object.assign - copies properties from one or more source objects into a target object [[Example][]]
+* [`Object.defineProperty`][17] - provides a more robust interface for adding new properties to an object [[Example][24]]
+* [`Object.getOwnPropertyNames`][18]/[`Object.keys`][19] - similar yet subtly different functions for listing an object's properties [[Example][25]]
+* [`Object.values`][20] - gets an array of all values contained in an object [[Example][26]]
+* [`Object.entries`][21] - gets an array of property key/value pairs from an object [[Example][27]]
+* [`Object.fromEntries`][22] - initializes an object based on an array of key/value pairs [[Example][28]]
+* [`Object.assign`][23] - copies properties from one or more source objects into a target object [[Example][29]]
 
 ### `Reflect` Type
 
@@ -67,10 +67,10 @@ Despite the many similarities the `Reflect` functions stand apart from the `Obje
 
 Again, some highlights:
 
-* Reflect.defineProperty/Reflect.deleteProperty
-* Reflect.get/Reflect.set
-* Reflect.ownKeys
-* Reflect.has
+* [`Reflect.defineProperty`][14]/Reflect.deleteProperty - adds or removes properties, respectively, from an object [[Example][]]
+* Reflect.get/Reflect.set - gets or sets, respectively, a value on an object by key [[Example][]]
+* Reflect.ownKeys - gets an array of all _own_ properties and symbols on an object [[Example][]]
+* Reflect.has - returns true or false based on whether an object has a property with the given key [[Example][]]
 
 ### `Symbol` Type
 
@@ -84,8 +84,8 @@ Symbols factor into metaprogramming by providing a mechanism by which we can saf
 
 New to JavaScript with ES6.
 
+* `Object.defineProperty`
 * `Proxy` type
-
 
 <!-- References -->
 
@@ -101,3 +101,19 @@ New to JavaScript with ES6.
 [11]: ./src/02-reflection/01-in-operator.js
 [12]: ./src/02-reflection/02-delete-operator.js
 [13]: ./src/02-reflection/03-typeof-operator.js
+[14]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
+[15]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function
+[16]: https://nodejs.org/api/vm.html
+[17]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+[18]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+[19]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+[20]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+[21]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+[22]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+[23]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+[24]: ./src/02-reflection/04-object-define-property.js
+[25]: ./src/02-reflection/05-object-get-properties.js
+[26]: ./src/02-reflection/06-object-values.js
+[27]: ./src/02-reflection/07-object-entries.js
+[28]: ./src/02-reflection/08-object-fromEntries.js
+[29]: ./src/02-reflection/09-object-assign.js
