@@ -67,18 +67,18 @@ Despite the many similarities the `Reflect` functions stand apart from the `Obje
 
 Again, some highlights:
 
-* [`Reflect.defineProperty`][14]/Reflect.deleteProperty - adds or removes properties, respectively, from an object [[Example][]]
-* Reflect.get/Reflect.set - gets or sets, respectively, a value on an object by key [[Example][]]
-* Reflect.ownKeys - gets an array of all _own_ properties and symbols on an object [[Example][]]
-* Reflect.has - returns true or false based on whether an object has a property with the given key [[Example][]]
+* [`Reflect.defineProperty`][14]/[`Reflect.deleteProperty`][30] - adds or removes properties, respectively, from an object [[Example][35]]
+* [`Reflect.get`][31]/[`Reflect.set`][32] - gets or sets, respectively, a value on an object by key [[Example][36]]
+* [`Reflect.ownKeys`][33] - gets an array of all _own_ properties and symbols on an object [[Example][37]]
+* [`Reflect.has`][34] - returns true or false based on whether an object has a property with the given key [[Example][38]]
 
 ### `Symbol` Type
 
 Also introduced with ES6, Symbols aren't inherently part of JavaScript metaprogramming but they do factor into it in several important ways. Before we see how Symbols apply to metaprogramming let's first learn about what Symbols are.
 
-<!-- TODO: Describe Symbols -->
+Symbols factor into metaprogramming by providing a mechanism by which we can safely extend objects, including the built-in types, without fear of conflicting with existing definitions. They can do this because every Symbol is guaranteed to be a unique instance when created with the Symbol constructor. This not only gives us a convenient way to add custom functionality but indeed also serves as the basis for numerous modern language mechanisms in a manner similar to that of how .NET interfaces drive C# language features such as `using` and `foreach`.
 
-Symbols factor into metaprogramming by providing a mechanism by which we can safely extend objects, including the built-in types, without fear of conflicting with existing definitions. This not only gives us a convenient way to add custom functionality but indeed also serves as the basis for numerous modern language mechanisms in a manner similar to that of how .NET interfaces drive C# language features such as `using` and `foreach`.
+[Examples][39]
 
 ## Intercession
 
@@ -117,3 +117,13 @@ New to JavaScript with ES6.
 [27]: ./src/02-reflection/07-object-entries.js
 [28]: ./src/02-reflection/08-object-fromEntries.js
 [29]: ./src/02-reflection/09-object-assign.js
+[30]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
+[31]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/get
+[32]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/set
+[33]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
+[34]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/has
+[35]: ./src/02-reflection/10-reflect-define-delete-property.js
+[36]: ./src/02-reflection/11-reflect-get-set.js
+[37]: ./src/02-reflection/12-reflect-ownkeys.js
+[38]: ./src/02-reflection/13-reflect-has.js
+[39]: ./src/02-reflection/14-symbols.js

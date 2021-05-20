@@ -26,3 +26,7 @@ Object.defineProperty(
 
 Object.getOwnPropertyNames(myObject); //?
 Object.keys(myObject); //?
+
+// In order to learn more about a property use the Object.getOwnPropertyDescriptor function
+
+Object.getOwnPropertyDescriptor(myObject, "middleName"); //?

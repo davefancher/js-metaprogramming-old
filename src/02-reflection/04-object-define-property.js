@@ -23,5 +23,7 @@ Object.defineProperty(
 
 myObject; //?
 
+// Note that there is no Object function for deleting a property
+
 // Other options for the descriptor include get and set. These start bleeding over to
 // intercession so we'll not discuss them here.
