@@ -34,7 +34,7 @@ That's not to say that code generation isn't a useful tool in some situations bu
 
 ## Reflection/Introspection
 
-Although code generation in JavaScript might not be terribly useful but the same cannot be said for the other two categories. Let's begin with something else that has been around since JavaScript's earliest days: Reflection.
+Code generation in JavaScript might not be terribly useful but the same cannot be said for the other two categories. Let's begin with something else that has been around since JavaScript's earliest days: Reflection.
 
 Reflection, or introspection, allows us to inspect and even modify our programs as they're running! This can include everything from inspecting object structure to determining object types to dynamically modifying data structures.
 
@@ -80,7 +80,7 @@ Symbols factor into metaprogramming by providing a mechanism by which we can saf
 
 * [Introductory Examples][39]
 * [Well-known Symbol Example][40]
-* [Extension Symbols Example][41]
+* [Extension Symbols Example][42]
 * [Extension Symbols Revisited Example][42]
 
 ## Intercession
@@ -144,7 +144,7 @@ Metaprogramming in JavaScript has evolved greatly over the years starting with i
 [38]: ./src/02-reflection/13-reflect-has.js
 [39]: ./src/02-reflection/14-symbols-intro.js
 [40]: ./src/02-reflection/15-symbols-well-known.js
-[41]: ./src/02-reflection/16-symbols-extension.js
+[42]: ./src/02-reflection/16-symbols-extension.js
 [42]: ./src/02-reflection/17-symbols-extension-revisit.js
 [43]: ./src/03-intercession/01-object-define-property.js
 [44]: ./src/03-intercession/02-proxy-simple.js

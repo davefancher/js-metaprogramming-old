@@ -15,7 +15,7 @@ Object.defineProperty(
     "age",
     {
         enumerable: false,
-        value: 41,
+        value: 42,
     });
 
 Reflect.has(myObject, "age"); //?

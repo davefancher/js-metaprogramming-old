@@ -17,7 +17,7 @@ Reflect.defineProperty(
         // Set configurable to allow deletion later
         configurable: true,
         enumerable: true,
-        value: 41,
+        value: 42,
     });
 
 myObject; //?

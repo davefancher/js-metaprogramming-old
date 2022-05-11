@@ -13,7 +13,7 @@ Object.defineProperty(
     "age",
     {
         enumerable: true,
-        value: 41
+        value: 42
     });
 
 Object.defineProperty(

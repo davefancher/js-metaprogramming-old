@@ -94,7 +94,7 @@ myOtherObject.history; //?
 // the object but if we haven't defined the property the custom logic won't be
 // invoked as we can see in this next example.
 
-myObject.age = 41;
+myObject.age = 42;
 
 myObject.age; //?
 

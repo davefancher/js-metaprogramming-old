@@ -4,7 +4,7 @@
 const entries = [
     [ "firstName", "Dave" ], 
     [ "lastName", "Fancher" ], 
-    [ "age", 41 ]
+    [ "age", 42 ]
 ];
 
 Object.fromEntries(entries); //?

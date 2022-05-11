@@ -18,8 +18,7 @@ const attachSymbol =
                     writable: false,
                     configurable: false,
                     value: fn
-                }
-            );
+                });
 
             return sym;
         };

@@ -12,7 +12,7 @@ myObject; //?
 myClone; //?
 
 // We can add properties to the clone without affecting the original
-myClone.age = 41;
+myClone.age = 42;
 
 myObject; //?
 myClone; //?

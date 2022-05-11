@@ -18,7 +18,7 @@ Object.defineProperty(
         //enumerable: true,
         // Control whether the property will be read-only or read-write
         //writable: true
-        value: 41,
+        value: 42,
     });
 
 myObject; //?

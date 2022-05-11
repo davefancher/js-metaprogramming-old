@@ -1,7 +1,7 @@
 const myObject = {
     firstName: "Dave",
     lastName: "Fancher",
-    age: 41
+    age: 42
 };
 
 // delete removes a property from an object. The return value is pretty

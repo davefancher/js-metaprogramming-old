@@ -4,7 +4,7 @@
 const myObject = {
     firstName: "Dave",
     lastName: "Fancher",
-    age: 41
+    age: 42
 };
 
 "firstName" in myObject; //?
