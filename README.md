@@ -44,7 +44,7 @@ Even in JavaScript's earliest days we had some limited support for _reflective_ 
 
 * [`in`][9] operator - returns true or false based on whether a property is present in the object or its prototype chain [[Example][11]]
 * [`delete`][4] operator - allows removing a property from an object [[Example][12]]
-* [`typeof][10] operator - returns a value's underlying type name but is unreliable. Use other approaches instead. [[Example][13]]
+* [`typeof`][10] operator - returns a value's underlying type name but is unreliable. Use other approaches instead. [[Example][13]]
 
 Although the various operators we've discussed certainly have their place they can be cumbersome to work with and definitely follow some obsolete patterns. Fortunately as JavaScript has evolved so has its metaprogramming capabilities.
 
